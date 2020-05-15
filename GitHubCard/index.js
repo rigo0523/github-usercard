@@ -53,7 +53,7 @@ head.style.borderRadius = '10px';
 head.style.background = "green"
 
 //component
-function createCrd(data) {
+function githubProfiles(data) {
   // create elements
   const card = document.createElement('div');
   const cardImg = document.createElement('img');
@@ -63,14 +63,14 @@ function createCrd(data) {
   return card;
   }
  
-  // component will be appended to cards class
+  // component githubProfiles will be appended to cards class
   const cards = document.querySelector(".cards");
 
 
  // create new card with my data
 axios.get("https://api.github.com/users/rigo0523")
  .then(response => {
-  cards.append(createCrd(response.data));
+  cards.append(githubProfiles(response.data));
   console.log(response.data, 'response data')
 })
 
